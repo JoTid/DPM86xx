@@ -109,6 +109,8 @@ int DPM8600::write(char cmd, float value)
     // Clear response
     // response = "";
 
+    _serial->flush();
+
     // Send command
     _serial->println(":" + _address + "w" + command + "=" + String(x) + ",");
 
@@ -180,6 +182,8 @@ float DPM8600::read(char cmd)
   {
     // Clear response
     // response = "";
+
+    _serial->flush();
 
     // Send a command
     _serial->println(":" + _address + "r" + command + "=0,");
