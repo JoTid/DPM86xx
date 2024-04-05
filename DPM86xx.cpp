@@ -86,7 +86,7 @@ float DPM86xx::maxCurrent()
 float DPM86xx::measuredCurrent()
 {
   float ftValueT = (float)uwMeasuredCurrentP;
-  ftValueT /= 1000;
+  ftValueT *= 0.001;
   return ftValueT;
 }
 
@@ -97,7 +97,7 @@ float DPM86xx::measuredCurrent()
 float DPM86xx::measuredVoltage()
 {
   float ftValueT = (float)uwMeasuredVoltageP;
-  ftValueT /= 100;
+  ftValueT *= 0.01;
   return ftValueT;
 }
 

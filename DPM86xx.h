@@ -16,7 +16,7 @@
  *
  */
 #ifndef DPM86XX_LOG_REQ_RESP
-#define DPM86XX_LOG_REQ_RESP
+#undef DPM86XX_LOG_REQ_RESP
 #endif
 
 /**
